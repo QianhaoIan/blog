@@ -2,15 +2,15 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>读书笔记《大话数据结构》 | Qianhao·千皓</title>
+  <title>读书笔记《大话数据结构》 | 休闲娱乐来一个！</title>
   <meta name="keywords" content=" 数据结构 ">
-  <meta name="description" content="读书笔记《大话数据结构》 | Qianhao·千皓">
+  <meta name="description" content="读书笔记《大话数据结构》 | 休闲娱乐来一个！">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="menu:about: on: true url: /about type: 1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
 <meta property="og:url" content="http://yoursite.com/about/index.html">
-<meta property="og:site_name" content="Qianhao·千皓">
+<meta property="og:site_name" content="休闲娱乐来一个！">
 <meta property="og:description" content="menu:about: on: true url: /about type: 1">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-08-02T03:48:00.619Z">
@@ -23,7 +23,7 @@
 
 <link href="/css/style.css?v=1.0.1" rel="stylesheet">
 
-<link href="/css/hl_theme/sublime.css?v=1.0.1" rel="stylesheet">
+<link href="/css/hl_theme/zenbum.css?v=1.0.1" rel="stylesheet">
 
 <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
     <img class="avatar" src="/img/avatar_1.jpg" />
 </a>
 <div class="author">
-    <span>Qianhao</span>
+    <span>Rick Luo</span>
 </div>
 
 <div class="icon">
@@ -315,12 +315,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-02 10:07:54'>2019-07-31 17:10</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-02 12:51:55'>2019-07-31 17:10</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:576</span>
+        <span>字数:570</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -354,8 +354,7 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h1 id="第一章-数据结构"><a href="#第一章-数据结构" class="headerlink" title="第一章 数据结构"></a>第一章 数据结构</h1><ul>
+        <h1 id="第一章-数据结构"><a href="#第一章-数据结构" class="headerlink" title="第一章 数据结构"></a>第一章 数据结构</h1><ul>
 <li><p>[<strong>逻辑结构</strong>]</p>
 <ul>
 <li>·集合结构 ·线性结构 ·树形结构 ·图形结构</li>
@@ -373,7 +372,6 @@
 <li><p><strong>抽象</strong>是指抽取出事物具有的普遍性的本质</p>
 </li>
 </ul>
-<hr>
 <h1 id="第二章-算法"><a href="#第二章-算法" class="headerlink" title="第二章 算法"></a>第二章 算法</h1><ul>
 <li>算法的三个特征【3个】<ul>
 <li>有穷性：会结束</li>
@@ -400,7 +398,6 @@
 </ul>
 </li>
 </ul>
-<hr>
 <h1 id="第三章-线性表"><a href="#第三章-线性表" class="headerlink" title="第三章 线性表"></a>第三章 线性表</h1><ul>
 <li>即为<strong>线性结构</strong>，可以用<strong>顺序存储</strong> 和 <strong>链式存储</strong>完成它</li>
 <li>线性表长度 和 数组长度， <strong>线性表的长度应该小于等于数组的长度</strong>。</li>
@@ -409,9 +406,24 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Status ListDelete (Sqlist *L, int i, ElemType *e)</span><br><span class="line">&#123;</span><br><span class="line">    int k;</span><br><span class="line">    if (i &gt; L-&gt;lenth)       //处理异常：线性表为空</span><br><span class="line">        return ERROR;</span><br><span class="line">    if (i&lt;1 || i&gt;L-&gt;lenth)</span><br><span class="line">        return ERROR;</span><br><span class="line">    *e = L-&gt;data(i-1);      //e得到第i个数</span><br><span class="line">    if (i != L-&gt;lenth)      //如果删除的不是最后一个数</span><br><span class="line">    &#123;</span><br><span class="line">        for(k=i ; k&lt;L-&gt;lenth; k++)      //将删除的数后面的数依次往前挪</span><br><span class="line">        &#123;</span><br><span class="line">            L-&gt;data[k-1] = L-&gt;data[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;lenth--;</span><br><span class="line">    return OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
+<pre><code>Status ListDelete (Sqlist *L, int i, ElemType *e)
+{
+    int k;
+    if (i &gt; L-&gt;lenth)       //处理异常：线性表为空
+        return ERROR;
+    if (i&lt;1 || i&gt;L-&gt;lenth)
+        return ERROR;
+    *e = L-&gt;data(i-1);      //e得到第i个数
+    if (i != L-&gt;lenth)      //如果删除的不是最后一个数
+    {
+        for(k=i ; k&lt;L-&gt;lenth; k++)      //将删除的数后面的数依次往前挪
+        {
+            L-&gt;data[k-1] = L-&gt;data[k];
+        }
+    }
+    L-&gt;lenth--;
+    return OK;
+}</code></pre><ul>
 <li><strong><em>链式存储</em></strong><ul>
 <li>每个node里面1个指针域 =》单链表.</li>
 </ul>
@@ -432,10 +444,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>读书笔记《大话数据结构》</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">576</span></p>
-    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Qianhao">Qianhao</a></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">570</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Rick Luo">Rick Luo</a></p>
     <p><span class="copy-title">发布时间:</span>2019-07-31, 17:10:23</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-02, 10:07:54</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-02, 12:51:55</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/31/读书笔记《大话数据结构》/" title="读书笔记《大话数据结构》">http://yoursite.com/2019/07/31/读书笔记《大话数据结构》/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -521,20 +533,6 @@
 
         /*高亮代码块行号*/
         
-        $('pre code').each(function(){
-            var lines = $(this).text().split('\n').length - 1, widther='';
-            if (lines>99) {
-                widther = 'widther'
-            }
-            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
-            $(this).addClass('has-numbering ' + widther)
-                    .parent()
-                    .append($numbering);
-            for(var i=1;i<=lines;i++){
-                $numbering.append($('<li/>').text(i));
-            }
-        });
-        
 
         /*访问数量*/
         
@@ -559,38 +557,6 @@
 
 <!--加入行号的高亮代码块样式-->
 
-<style>
-    pre{
-        position: relative;
-        margin-bottom: 24px;
-        border-radius: 10px;
-        border: 1px solid #e2dede;
-        background: #FFF;
-        overflow: hidden;
-    }
-    code.has-numbering{
-        margin-left: 30px;
-    }
-    code.has-numbering.widther{
-        margin-left: 35px;
-    }
-    .pre-numbering{
-        margin: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        padding: 0.5em 3px 0.7em 5px;
-        border-right: 1px solid #C3CCD0;
-        text-align: right;
-        color: #AAA;
-        background-color: ;
-    }
-    .pre-numbering.widther {
-        width: 35px;
-    }
-</style>
-
 <!--自定义样式设置-->
 <style>
     
@@ -611,24 +577,6 @@
     
 
     /*列表样式*/
-    
-    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
-        border: #e2dede solid 1px;
-        border-radius: 10px;
-        padding: 10px 32px 10px 56px;
-    }
-    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
-        margin-bottom: auto;
-        margin-left: auto;
-    }
-    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
-        margin-bottom: auto;
-        margin-left: auto;
-    }
     
 
     /* 背景图样式 */
@@ -661,6 +609,16 @@
     }
     
 
+    
+    .post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
     
 </style>
 

@@ -633,7 +633,7 @@ div.ac > ul > li:before,
   color: #f00;
 }
 .nav-left {
-  width: 120px;
+  width: 130px;
   height: 100%;
   background: #2a2935;
   box-shadow: inset -15px 0 15px -15px #222;
@@ -648,8 +648,8 @@ div.ac > ul > li:before,
 .nav-left .avatar {
   width: 100px;
   height: 100px;
-  margin: 55px auto 15px;
-  border-radius: 50%;
+  margin: 125px auto 15px;
+  border-radius: 100%;
   box-shadow: 0 0 0px 4px #fff, 0 0 4px 4px #eee;
   background-repeat: no-repeat;
   background-size: 100px 100px;
@@ -669,7 +669,7 @@ div.ac > ul > li:before,
 }
 .nav-left .icon {
   text-align: center;
-  margin: 0 auto 5px;
+  margin: 0 auto 10px;
 }
 .nav-left .icon a {
   color: #fff;
@@ -717,7 +717,7 @@ div.ac > ul > li:before,
 .nav-left ul {
   margin: 0;
   padding: 0;
-  font-size: 17px;
+  font-size: 15px;
   border-top: 1px solid #fff;
   list-style: none;
   overflow-y: auto;
@@ -733,7 +733,7 @@ div.ac > ul > li:before,
 }
 .nav-left ul.sub li {
   line-height: 25px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .nav-left ul.sub li:last-child {
   border-bottom: hidden;
@@ -1090,7 +1090,7 @@ div.ac > ul > li:before,
 }
 .nav-right .title-list nav a .post-date,
 .nav-right .title-list #local-search-result a .post-date {
-  font-size: 15px;
+  font-size: 14px;
   margin: 8px 0;
   padding-right: 3px;
   color: #9aa4af;
@@ -1674,7 +1674,7 @@ h5,
 h6 {
   font-family: inherit;
   font-weight: normal;
-  margin-top: 30px;
+  margin-top: 50px;
   color: #283444;
   text-rendering: optimizelegibility;
   border-bottom: 1px solid #eee;
