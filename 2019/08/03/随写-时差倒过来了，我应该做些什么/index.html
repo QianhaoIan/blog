@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>读书笔记《大话数据结构》 | 香槟-厄巴纳皇冠赌场</title>
-  <meta name="keywords" content=" 数据结构 ">
-  <meta name="description" content="读书笔记《大话数据结构》 | 香槟-厄巴纳皇冠赌场">
+  <title>「随写」时差倒过来了，我应该做些什么 | 香槟-厄巴纳皇冠赌场</title>
+  <meta name="keywords" content=" 随写 , 想法 ">
+  <meta name="description" content="「随写」时差倒过来了，我应该做些什么 | 香槟-厄巴纳皇冠赌场">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介罗千皓，男 本科专业，工程热物理；正在读的硕士专业，农业与生物工程；目前准备转码(不一定) 喜欢唱，跳，rap，篮球喜欢新的事物 最近在锻炼身体，学习英语，手刻代码… 联系方式 QQ : 317876269邮箱 : qianhao_luo@163.com">
 <meta property="og:type" content="website">
@@ -305,9 +305,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-读书笔记《大话数据结构》" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-随写-时差倒过来了，我应该做些什么" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">读书笔记《大话数据结构》</h1>
+        <h1 class="article-title">「随写」时差倒过来了，我应该做些什么</h1>
     
     <div class="article-meta">
         
@@ -315,28 +315,28 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="笔记">笔记</a>/
-            
-                <a href="javascript:" data-rel="CS">CS</a>
+                <a href="javascript:" data-rel="随写">随写</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color5">数据结构</a>
+            <a href="javascript:" class="color3">随写</a>
+            
+            <a href="javascript:" class="color3">想法</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-02 17:56:46'>2019-07-31 17:10</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-03 14:45:36'>2019-08-03 14:29</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:570</span>
+        <span>字数:211</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -355,7 +355,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一章-数据结构"><span class="toc-text">第一章 数据结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二章-算法"><span class="toc-text">第二章 算法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三章-线性表"><span class="toc-text">第三章 线性表</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -370,82 +370,20 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="第一章-数据结构"><a href="#第一章-数据结构" class="headerlink" title="第一章 数据结构"></a>第一章 数据结构</h1><ul>
-<li><p>[<strong>逻辑结构</strong>]</p>
-<ul>
-<li>·集合结构 ·线性结构 ·树形结构 ·图形结构</li>
-</ul>
-</li>
-<li><p>[<strong>物理结构</strong>]数据元素的存储结构形式有两种: <strong>顺序存储</strong> 和 <strong>链式存储</strong></p>
-<ul>
-<li>顺序存储：元素存放在地址连续的存储单元，即在内存内连续</li>
-<li>链式存储：任意存储单元，可以连续，也可以不连续<blockquote>
-<p><strong>逻辑结构</strong>是面向问题的，而<strong>物理结构</strong>是面向计算机的，其基本的目标就是将数据及其逻辑关系存储到计算机的内存中</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong>抽象</strong>是指抽取出事物具有的普遍性的本质</p>
-</li>
-</ul>
-<h1 id="第二章-算法"><a href="#第二章-算法" class="headerlink" title="第二章 算法"></a>第二章 算法</h1><ul>
-<li>算法的三个特征【3个】<ul>
-<li>有穷性：会结束</li>
-<li>确定性：无二义性</li>
-<li>可行性：每一步都能够通过执行有限次数完成</li>
-</ul>
-</li>
-<li>算法的设计要求 【三个】<ul>
-<li>正确性，可读性，健壮性</li>
-<li>时间效率高和存储量低</li>
-</ul>
-</li>
-<li><strong>时间复杂度</strong><ul>
-<li>推导大 O 阶 :<ol>
-<li>用常鼓 1 取代运行时闺中的所有加法常颤。</li>
-<li>在修改后的运行次搬画锺中，只保留最高阶项。</li>
-<li>如果最高阶项存在且不是 1 ，则去除与这个项相乘的常数。得到的结果就是大 O 阶。</li>
+        <p>7.31日入境，经历了8.01日的昏昏沉沉<br>虽然中午睡了半小时，不过总算熬过了第1天<br>8.02日就好了很多，不过突发事件让我睡眠时间还是拖延了2小时到凌晨1点才睡</p>
+<p>说回来，所以，时差倒过来了，我应该做些什么</p>
+<ol>
+<li>健身</li>
+<li>英语</li>
+<li>写码</li>
 </ol>
-</li>
-</ul>
-</li>
-<li>常见的时间复杂度<ul>
-<li>0(1) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; 0(n^2) &lt; 0(n^3) &lt; 0(2^n) &lt; O(n!) &lt; O(n^n)</li>
-</ul>
-</li>
-</ul>
-<h1 id="第三章-线性表"><a href="#第三章-线性表" class="headerlink" title="第三章 线性表"></a>第三章 线性表</h1><ul>
-<li>即为<strong>线性结构</strong>，可以用<strong>顺序存储</strong> 和 <strong>链式存储</strong>完成它</li>
-<li>线性表长度 和 数组长度， <strong>线性表的长度应该小于等于数组的长度</strong>。</li>
-<li><strong><em>顺序存储</em></strong><ul>
-<li>例子：顺序存储结构的插入与删除</li>
-</ul>
-</li>
-</ul>
-<pre><code>Status ListDelete (Sqlist *L, int i, ElemType *e)
-{
-    int k;
-    if (i &gt; L-&gt;lenth)       //处理异常：线性表为空
-        return ERROR;
-    if (i&lt;1 || i&gt;L-&gt;lenth)
-        return ERROR;
-    *e = L-&gt;data(i-1);      //e得到第i个数
-    if (i != L-&gt;lenth)      //如果删除的不是最后一个数
-    {
-        for(k=i ; k&lt;L-&gt;lenth; k++)      //将删除的数后面的数依次往前挪
-        {
-            L-&gt;data[k-1] = L-&gt;data[k];
-        }
-    }
-    L-&gt;lenth--;
-    return OK;
-}</code></pre><ul>
-<li><strong><em>链式存储</em></strong><ul>
-<li>每个node里面1个指针域 =》单链表.</li>
-</ul>
-</li>
-</ul>
-<p><code>typedef struct{} Node     这之类的C语言语法我还不是很明白！</code></p>
+<p>似乎也不是很多嘛</p>
+<p>待会还要帮老师拍个视频，台词有点羞耻，我看看能不能自己改改啊<br>另外今天是健身的第一天，看看可不可以有什么改变</p>
+<blockquote>
+<p>我觉得自己有个缺点就是吃着碗里的，想着锅里的。自己手里事情还没做好，总是想着改变，那不如先试着把手里的事情多做做，看看会不会有<strong>小奇迹</strong></p>
+</blockquote>
+<img src="/img/IMG_20181212_103237.jpg" width="30%" height="30%" alt="刚换的Facebook头像哈哈">
+
 
       
        <hr><span style="font-style: italic;color: gray;"> 啦啦，有任何问题，可以邮件至 qianhao_luo@163.com </span>
@@ -459,12 +397,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>读书笔记《大话数据结构》</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">570</span></p>
+    <p><span class="copy-title">文章标题:</span>「随写」时差倒过来了，我应该做些什么</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">211</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Rick Luo">Rick Luo</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-31, 17:10:23</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-02, 17:56:46</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/31/读书笔记《大话数据结构》/" title="读书笔记《大话数据结构》">http://yoursite.com/2019/07/31/读书笔记《大话数据结构》/</a>
+    <p><span class="copy-title">发布时间:</span>2019-08-03, 14:29:02</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-03, 14:45:36</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/03/随写-时差倒过来了，我应该做些什么/" title="「随写」时差倒过来了，我应该做些什么">http://yoursite.com/2019/08/03/随写-时差倒过来了，我应该做些什么/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
