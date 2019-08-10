@@ -177,7 +177,7 @@
     
         
             
-            <li><div data-rel="问题处理">问题处理<small>(1)</small></div>
+            <li><div data-rel="记录">记录<small>(1)</small></div>
                 
             </li>
             
@@ -189,7 +189,7 @@
     
         
             
-            <li><div data-rel="记录">记录<small>(1)</small></div>
+            <li><div data-rel="问题处理">问题处理<small>(1)</small></div>
                 
             </li>
             
@@ -256,15 +256,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">mac</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">书单</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">影单</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">mac</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -441,7 +441,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-10 17:03:59'>2019-08-09 23:03</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-10 17:11:00'>2019-08-09 23:03</time>
         
     </div>
     <div class="article-meta">
@@ -483,11 +483,14 @@
         <blockquote>
 <p><strong>引用另一个网课C++的经典句子</strong><br>Many scripting languages today use reference semantics for almost everything by default, but C++ gives you more control to choose when memory is copied or when it is altered in-place.</p>
 </blockquote>
-<h2 id="Week1"><a href="#Week1" class="headerlink" title="Week1"></a>Week1</h2><img src="/img/coursera-text-1.png" width="50%" height="50%">
+<img src="/img/coursera-text-1.png" width="48%" height="45%" divalign="left">
 <!-- alt = 'The relationship between Text Retrival and Mining' -->
 
-<img src="/img/coursera-text/1.png" width="50%" height="50%" align="right">  
+<h2 id="Week1"><a href="#Week1" class="headerlink" title="Week1"></a>Week1</h2><img src="/img/coursera-text/1.png" width="48%" height="45%" divalign="right">  
 <!-- alt = 'Course Schedule' -->
+
+
+
 
 <h3 id="1-1-Natural-Language-Content-Analysis"><a href="#1-1-Natural-Language-Content-Analysis" class="headerlink" title="1.1 Natural Language Content Analysis"></a>1.1 Natural Language Content Analysis</h3><p>自然语言处理(NLP)分几个步骤</p>
 <ul>
@@ -499,7 +502,7 @@
 <p>Ambiguity是最大问题，同时common sense是被需要的<br>Inference还不大好，由于推断和不确定性，这也是AI的挑战</p>
 <p>NLP techniques must be <strong>general, robust, and efficent</strong></p>
 <ul>
-<li><strong>Dag of words</strong> 在 modern search engine 中依旧是主流</li>
+<li><strong>Bag of words</strong> 在 modern search engine 中依旧是主流</li>
 <li><strong>Deeper NLP</strong> is needed for future search engine</li>
 </ul>
 <hr>
@@ -538,7 +541,7 @@
     <p><span class="copy-title">文章字数:</span><span class="post-count">223</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Rick Luo">Rick Luo</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-09, 23:03:10</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-10, 17:03:59</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-10, 17:11:00</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/09/Text-Retrieval-and-Search-Engines/" title="「网课」Text Retrieval and Search Engines">http://yoursite.com/2019/08/09/Text-Retrieval-and-Search-Engines/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -600,7 +603,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#笔记','#Coursera','#mac','#书单','#影单','#学习','#随写','#想法','#博客搭建','#术语','#数据结构',],
+            'data': ['#笔记','#Coursera','#书单','#影单','#mac','#学习','#随写','#想法','#博客搭建','#术语','#数据结构',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
