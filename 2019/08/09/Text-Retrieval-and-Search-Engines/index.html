@@ -145,6 +145,14 @@
     
         
             
+            <li><div data-rel="问题处理">问题处理<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
             <li><div data-rel="笔记"><i class="fold iconfont icon-right"></i>笔记<small>(4)</small></div>
                 
                     <ul class="sub hide">
@@ -153,23 +161,15 @@
                             
                         </li>
                             
-                        <li><div data-rel="CS">CS<small>(2)</small></div>
-                            
-                        </li>
-                            
                         <li><div data-rel="科普">科普<small>(1)</small></div>
                             
                         </li>
                             
+                        <li><div data-rel="CS">CS<small>(2)</small></div>
+                            
+                        </li>
+                            
                     </ul>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="问题处理">问题处理<small>(1)</small></div>
                 
             </li>
             
@@ -248,15 +248,15 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">mac</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">笔记</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">Coursera</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">mac</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -268,14 +268,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">术语</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">学习</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">随写</a>
     </li>
     
@@ -284,7 +276,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">学习</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">博客搭建</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">术语</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -441,12 +441,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-09 23:06:59'>2019-08-09 23:03</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-09 23:10:27'>2019-08-09 23:03</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:42</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -480,7 +480,10 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <blockquote>
+<p>引用另一个网课C++的经典句子<br>Many scripting languages today use reference<br>semantics for almost everything by default,<br>but C++ gives you more control to choose when<br>memory is copied or when it is altered in-place.</p>
+</blockquote>
+
       
        <hr><span style="font-style: italic;color: gray;"> 啦啦，有任何问题，可以邮件至 qianhao_luo@163.com </span>
     </div>
@@ -494,10 +497,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>「网课」Text Retrieval and Search Engines</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">0</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">42</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Rick Luo">Rick Luo</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-09, 23:03:10</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-09, 23:06:59</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-09, 23:10:27</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/09/Text-Retrieval-and-Search-Engines/" title="「网课」Text Retrieval and Search Engines">http://yoursite.com/2019/08/09/Text-Retrieval-and-Search-Engines/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -559,7 +562,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#笔记','#Coursera','#mac','#书单','#影单','#术语','#学习','#随写','#想法','#博客搭建','#数据结构',],
+            'data': ['#mac','#笔记','#Coursera','#书单','#影单','#随写','#想法','#学习','#博客搭建','#术语','#数据结构',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
