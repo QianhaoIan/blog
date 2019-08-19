@@ -145,7 +145,7 @@
     
         
             
-            <li><div data-rel="问题处理">问题处理<small>(3)</small></div>
+            <li><div data-rel="问题处理">问题处理<small>(4)</small></div>
                 
             </li>
             
@@ -157,11 +157,11 @@
                 
                     <ul class="sub hide">
                         
-                        <li><div data-rel="CS">CS<small>(2)</small></div>
+                        <li><div data-rel="Coursera">Coursera<small>(2)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="Coursera">Coursera<small>(2)</small></div>
+                        <li><div data-rel="CS">CS<small>(2)</small></div>
                             
                         </li>
                             
@@ -177,7 +177,7 @@
     
         
             
-            <li><div data-rel="随写">随写<small>(7)</small></div>
+            <li><div data-rel="随写">随写<small>(6)</small></div>
                 
             </li>
             
@@ -280,6 +280,14 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">博客搭建</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">学习</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">随写</a>
     </li>
     
@@ -288,15 +296,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">博客搭建</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">术语</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">学习</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -389,11 +389,11 @@
             <span class="post-date" title="2019-08-03 14:29:02">2019/08/03</span>
         </a>
         
-        <a  class="随写 "
+        <a  class="问题处理 "
            href="/2019/08/01/关于avatar和favicon/"
            data-tag="博客搭建"
            data-author="" >
-            <span class="post-title" title="关于博客网页图标如何设立？附网址">关于博客网页图标如何设立？附网址</span>
+            <span class="post-title" title="关于hexo博客网页图标如何设立？附网址">关于hexo博客网页图标如何设立？附网址</span>
             <span class="post-date" title="2019-08-01 20:59:20">2019/08/01</span>
         </a>
         
@@ -473,7 +473,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-19 14:36:27'>2019-08-19 14:33</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-19 14:39:10'>2019-08-19 14:33</time>
         
     </div>
     <div class="article-meta">
@@ -515,9 +515,9 @@
         <blockquote>
 <p>作者：蓝色<br>链接：<a href="https://www.zhihu.com/question/35614219/answer/63798713" target="_blank" rel="noopener">https://www.zhihu.com/question/35614219/answer/63798713</a><br>来源：知乎</p>
 </blockquote>
-<p>对于修饰Object来说，<br>const并未区分出编译期常量和运行期常量<br>constexpr限定在了编译期常量</p>
-<p>然后我想对修饰函数多说两句，那就是constexpr修饰的函数，返回值不一定是编译期常量。#It is not a bug, it is a feature.</p>
-<pre><code>##include &lt;iostream&gt;
+<p>对于修饰Object来说，<br><strong>const</strong>并未区分出编译期常量和运行期常量<br><strong>constexpr</strong>限定在了编译期常量</p>
+<p>然后我想对修饰函数多说两句，那就是constexpr修饰的函数，返回值不一定是编译期常量。#It is not a bug, it is a feature.#</p>
+<pre><code>#include &lt;iostream&gt;
 #include &lt;array&gt;
 using namespace std;
 
@@ -536,7 +536,8 @@ int main()
     // But...
     std::array&lt;int, foo(i)&gt; arr1; // Error
 
-}</code></pre><p>所以，对于constexpr需要两方面看待。constexpr修饰的函数，简单的来说，如果其传入的参数可以在编译时期计算出来，那么这个函数就会产生编译时期的值。但是，传入的参数如果不能在编译时期计算出来，那么constexpr修饰的函数就和普通函数一样了。不过，我们不必因此而写两个版本，所以如果函数体适用于constexpr函数的条件，可以尽量加上constexpr。而检测constexpr函数是否产生编译时期值的方法很简单，就是利用std::array需要编译期常值才能编译通过的小技巧。这样的话，即可检测你所写的函数是否真的产生编译期常值了。</p>
+}</code></pre><p>所以，对于constexpr需要两方面看待。constexpr修饰的函数，简单的来说，如果其传入的参数可以在编译时期计算出来，那么这个函数就会产生编译时期的值。但是，传入的参数如果不能在编译时期计算出来，那么constexpr修饰的函数就和普通函数一样了。不过，我们不必因此而写两个版本，所以如果函数体适用于constexpr函数的条件，可以尽量加上constexpr。</p>
+<p>而检测constexpr函数是否产生编译时期值的方法很简单，就是利用std::array需要编译期常值才能编译通过的小技巧。这样的话，即可检测你所写的函数是否真的产生编译期常值了。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 啦啦，有任何问题，可以邮件至 qianhao_luo@163.com </span>
@@ -554,7 +555,7 @@ int main()
     <p><span class="copy-title">文章字数:</span><span class="post-count">344</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Rick Luo">Rick Luo</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-19, 14:33:15</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-19, 14:36:27</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-19, 14:39:10</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/19/C-中-const-和-constexpr-的区别/" title="C++中 const 和 constexpr 的区别">http://yoursite.com/2019/08/19/C-中-const-和-constexpr-的区别/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -616,7 +617,7 @@ int main()
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#Mac','#java','#C++','#mac','#笔记','#Coursera','#书单','#影单','#随写','#想法','#博客搭建','#术语','#学习','#数据结构',],
+            'data': ['#Mac','#java','#C++','#mac','#笔记','#Coursera','#书单','#影单','#博客搭建','#学习','#随写','#想法','#术语','#数据结构',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
