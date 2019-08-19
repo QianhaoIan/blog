@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>「随写」时差倒过来了，我应该做些什么 | 香槟-厄巴纳皇冠赌场</title>
-  <meta name="keywords" content=" 随写 , 想法 ">
-  <meta name="description" content="「随写」时差倒过来了，我应该做些什么 | 香槟-厄巴纳皇冠赌场">
+  <title>C++中 const 和 constexpr 的区别 | 香槟-厄巴纳皇冠赌场</title>
+  <meta name="keywords" content=" C++ ">
+  <meta name="description" content="C++中 const 和 constexpr 的区别 | 香槟-厄巴纳皇冠赌场">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介罗千皓，男 本科专业，工程热物理；正在读的硕士专业，农业与生物工程；目前准备转码(不一定) 喜欢唱，跳，rap，篮球喜欢新的事物 最近在锻炼身体，学习英语，手刻代码… 联系方式 QQ : 317876269邮箱 : qianhao_luo@163.com">
 <meta property="og:type" content="website">
@@ -449,9 +449,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-随写-时差倒过来了，我应该做些什么" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-C-中-const-和-constexpr-的区别" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">「随写」时差倒过来了，我应该做些什么</h1>
+        <h1 class="article-title">C++中 const 和 constexpr 的区别</h1>
     
     <div class="article-meta">
         
@@ -459,28 +459,26 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="随写">随写</a>
+                <a href="javascript:" data-rel="问题处理">问题处理</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">随写</a>
-            
-            <a href="javascript:" class="color3">想法</a>
+            <a href="javascript:" class="color4">C++</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-04 01:10:35'>2019-08-03 14:29</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-19 14:34:22'>2019-08-19 14:33</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:225</span>
+        <span>字数:341</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -514,22 +512,27 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>7.31日入境，经历了8.01日的昏昏沉沉<br>虽然中午睡了半小时，不过总算熬过了第1天<br>8.02日就好了很多，不过突发事件让我睡眠时间还是拖延了2小时到凌晨1点才睡</p>
-<p>说回来，所以，时差倒过来了，我应该做些什么</p>
-<ol>
-<li>健身</li>
-<li>英语</li>
-<li>写码</li>
-</ol>
-<p>似乎也不是很多嘛</p>
-<p>待会还要帮老师拍个视频，台词有点羞耻，我看看能不能自己改改啊<br>另外今天是健身的第一天，看看可不可以有什么改变</p>
-<blockquote>
-<p>我觉得自己有个缺点就是吃着碗里的，想着锅里的。自己手里事情还没做好，总是想着改变，那不如先试着把手里的事情多做做，看看会不会有<strong>小奇迹</strong></p>
-</blockquote>
-<p>好了~ hexo d 走你</p>
-<p>对了，最后早点睡觉</p>
-<img src="/img/IMG_20181212_103237.jpg" width="30%" height="30%" alt="刚换的Facebook头像哈哈">
+        <p>作者：蓝色<br>链接：<a href="https://www.zhihu.com/question/35614219/answer/63798713" target="_blank" rel="noopener">https://www.zhihu.com/question/35614219/answer/63798713</a><br>来源：知乎</p>
+<p>对于修饰Object来说，const并未区分出编译期常量和运行期常量constexpr限定在了编译期常量然后我想对修饰函数多说两句，那就是constexpr修饰的函数，返回值不一定是编译期常量。#It is not a bug, it is a feature.##include <iostream></iostream></p>
+<pre><code>#include &lt;array&gt;
+using namespace std;
 
+constexpr int foo(int i)
+{
+    return i + 5;
+}
+
+int main()
+{
+    int i = 10;
+    std::array&lt;int, foo(5)&gt; arr; // OK
+
+    foo(i); // Call is Ok
+
+    // But...
+    std::array&lt;int, foo(i)&gt; arr1; // Error
+
+}</code></pre><p>所以，对于constexpr需要两方面看待。constexpr修饰的函数，简单的来说，如果其传入的参数可以在编译时期计算出来，那么这个函数就会产生编译时期的值。但是，传入的参数如果不能在编译时期计算出来，那么constexpr修饰的函数就和普通函数一样了。不过，我们不必因此而写两个版本，所以如果函数体适用于constexpr函数的条件，可以尽量加上constexpr。而检测constexpr函数是否产生编译时期值的方法很简单，就是利用std::array需要编译期常值才能编译通过的小技巧。这样的话，即可检测你所写的函数是否真的产生编译期常值了。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 啦啦，有任何问题，可以邮件至 qianhao_luo@163.com </span>
@@ -543,12 +546,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>「随写」时差倒过来了，我应该做些什么</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">225</span></p>
+    <p><span class="copy-title">文章标题:</span>C++中 const 和 constexpr 的区别</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">341</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Rick Luo">Rick Luo</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-08-03, 14:29:02</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-04, 01:10:35</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/03/随写-时差倒过来了，我应该做些什么/" title="「随写」时差倒过来了，我应该做些什么">http://yoursite.com/2019/08/03/随写-时差倒过来了，我应该做些什么/</a>
+    <p><span class="copy-title">发布时间:</span>2019-08-19, 14:33:15</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-19, 14:34:22</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/19/C-中-const-和-constexpr-的区别/" title="C++中 const 和 constexpr 的区别">http://yoursite.com/2019/08/19/C-中-const-和-constexpr-的区别/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
